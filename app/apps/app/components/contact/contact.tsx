@@ -51,7 +51,7 @@ export function Contact() {
               minLength={1}
               maxLength={64}
               required
-              onChange={(event) => setForm({ name: event.currentTarget.value })}
+              onChange={(e) => setForm({ name: e.currentTarget.value })}
             />
             <input
               className="w-full py-3 transition-all bg-transparent border-b outline-none text-primary placeholder:text-primary focus:border-secondary"
@@ -59,16 +59,14 @@ export function Contact() {
               minLength={1}
               required
               type="email"
-              onChange={(event) =>
-                setForm({ email: event.currentTarget.value })
-              }
+              onChange={(e) => setForm({ email: e.currentTarget.value })}
             />
             <textarea
               className="w-full py-3 mb-12 transition-all bg-transparent border-b outline-none resize-none text-primary placeholder:text-primary focus:border-secondary"
               placeholder="How can I be of service?"
               minLength={1}
               required
-              onChange={(event) => setForm({ desc: event.currentTarget.value })}
+              onChange={(e) => setForm({ desc: e.currentTarget.value })}
             />
             <button
               className="rounded-btn-grad"
@@ -87,7 +85,7 @@ export function Contact() {
                   alert(data.error)
                 } else {
                   alert(
-                    'Your response has been recorded - I will reach out to you soon!'
+                    'Your request has been recorded - I will reach out to you soon!'
                   )
                 }
               }}

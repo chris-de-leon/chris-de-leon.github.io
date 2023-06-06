@@ -70,13 +70,13 @@ jobs:
       - name: Install dependencies
         run: cd app && ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: cd app && npm run build
-      - name: Static HTML export with Next.js
-        run: cd app && npm run export
+        run: cd app && npm run build:prod
+      # - name: Static HTML export with Next.js
+      #   run: cd app && npm run export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./app/dist/app/exported
+          path: ./app/dist/apps/app/exported
 
   # Deployment job
   deploy:
