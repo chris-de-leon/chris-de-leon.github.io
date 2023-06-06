@@ -1,11 +1,11 @@
 import { fadeIn } from 'apps/app/utils/variants'
+import { FormEvent, useReducer } from 'react'
 import { motion } from 'framer-motion'
-import { useReducer } from 'react'
 
 interface ContactForm {
   readonly name: string
   readonly email: string
-  readonly desc: string
+  readonly msg: string
 }
 
 export function Contact() {
@@ -18,6 +18,50 @@ export function Contact() {
     },
     {}
   )
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    if (form.name == null || form.name.length === 0) {
+      alert('Error - name is required')
+    }
+
+    if (form.email == null || form.email.length === 0) {
+      alert('Error - email is required')
+    }
+
+    if (form.msg == null || form.msg.length === 0) {
+      alert('Error - message is required')
+    }
+
+    try {
+      // https://www.staticforms.xyz/
+      const url = new URL('https://api.staticforms.xyz/submit')
+      const key = '69b5dff6-b0e9-41da-8d63-adb9881db046'
+      const res = await fetch(url.href, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.msg,
+          accessKey: key,
+        }),
+      })
+
+      if (res.status !== 200) {
+        throw new Error(await res.text())
+      }
+
+      console.log(await res.json())
+      alert('Your response has been recorded - I will reach out to you soon!')
+    } catch (err) {
+      console.error(err)
+      alert('Could not submit form - please try again later')
+    }
+  }
 
   return (
     <section className="section" id="contact">
@@ -43,6 +87,7 @@ export function Contact() {
             initial="hidden"
             whileInView={'visible'}
             viewport={{ once: false, amount: 0.7 }}
+            onSubmit={handleSubmit}
           >
             <input
               className="w-full py-3 transition-all bg-transparent border-b outline-none text-primary placeholder:text-primary focus:border-secondary"
@@ -66,32 +111,9 @@ export function Contact() {
               placeholder="How can I be of service?"
               minLength={1}
               required
-              onChange={(e) => setForm({ desc: e.currentTarget.value })}
+              onChange={(e) => setForm({ msg: e.currentTarget.value })}
             />
-            <button
-              className="rounded-btn-grad"
-              onClick={async (event) => {
-                event.preventDefault()
-                const result = await fetch('/api/contact', {
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  method: 'POST',
-                  body: JSON.stringify(form),
-                })
-
-                const data = await result.json()
-                if (result.status !== 200) {
-                  alert(data.error)
-                } else {
-                  alert(
-                    'Your request has been recorded - I will reach out to you soon!'
-                  )
-                }
-              }}
-            >
-              Submit
-            </button>
+            <button className="rounded-btn-grad">Submit</button>
           </motion.form>
         </div>
       </div>
