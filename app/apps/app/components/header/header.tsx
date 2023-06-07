@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import { LINKS } from 'apps/app/content'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export function Header() {
@@ -8,8 +8,7 @@ export function Header() {
       <div className="container mx-auto">
         <div className="flex flex-row items-center justify-between">
           <Link href={LINKS.LINKEDIN.HOME} target="_blank">
-            <Image
-              className=""
+            <img
               src="/logo.png"
               alt="logo"
               loading="lazy"
