@@ -22,7 +22,7 @@ export function AboutContent(props: AboutContentProps) {
         always stay up-to-date with the latest industry trends and best
         practices.
       </p>
-      <div className="flex pb-10">
+      <div className="flex flex-col pb-10">
         <AboutStat
           inView={props.inView}
           prefix=""
