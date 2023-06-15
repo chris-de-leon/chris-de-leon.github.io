@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin, FaCode } from 'react-icons/fa'
 import { fadeIn } from '../../utils/variants'
 import { LINKS } from 'apps/app/content'
+import { GrMail } from 'react-icons/gr'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
@@ -25,6 +26,9 @@ export function BannerSocials(props: BannerSocialsProps) {
       </Link>
       <Link href={LINKS.FIVERR} target="_blank">
         <FaCode />
+      </Link>
+      <Link href={LINKS.GOOGLE.EMAIL} target="_blank">
+        <GrMail />
       </Link>
     </motion.div>
   )
