@@ -3,7 +3,6 @@ import Script from 'next/script'
 
 class MyDocument extends Document {
   render() {
-    console.log(process.env['NODE_ENV'])
     const gtag = 'G-BB0Z8BSLC8'
     return (
       <Html>
