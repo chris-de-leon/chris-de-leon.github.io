@@ -9,6 +9,7 @@ import {
 } from '../components'
 
 export function Index() {
+  console.log(process.env['NODE_ENV'])
   return (
     <>
       <Header />
