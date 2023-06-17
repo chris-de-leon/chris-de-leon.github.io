@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
@@ -9,15 +9,23 @@ interface NavBarBookmarkProps {
 }
 
 export function NavBarBookmark(props: PropsWithChildren<NavBarBookmarkProps>) {
+  const [highlight, setHighlight] = useState('')
   const router = useRouter()
+
+  // https://nextjs.org/docs/messages/react-hydration-error#possible-ways-to-fix-it
+  useEffect(() => {
+    if (router.asPath === `/${props.sectionId}`) {
+      setHighlight(
+        'rounded-full bg-gradient-to-r from-accent-4 via-accent-5 to-accent-6 text-white'
+      )
+    } else {
+      setHighlight('')
+    }
+  }, [router, props.sectionId])
 
   return (
     <Link
-      className={`relative cursor-pointer w-[40px] h-[40px] flex items-center justify-center text-primary/50 ${
-        router.asPath === `/${props.sectionId}`
-          ? 'rounded-full bg-gradient-to-r from-accent-4 via-accent-5 to-accent-6 text-white'
-          : ''
-      }`}
+      className={`relative w-[40px] h-[40px] flex items-center justify-center text-primary/50 ${highlight}`}
       href={props.sectionId}
     >
       {/* https://github.com/tailwindlabs/tailwindcss/discussions/2361#discussion-18622 */}

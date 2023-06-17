@@ -3,12 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "export": "npx nx export app",
+    "start": "nx serve app",
     "format": "nx format",
-    "start": "nx serve",
-    "build": "nx build",
-    "build:prod": "nx run-many --target=build --projects=app --parallel --nx-bail --verbose",
-    "test": "nx test"
+    "build": "nx run app:build:production",
+    "export": "nx run app:export:production"
   },
   "private": true,
   "dependencies": {

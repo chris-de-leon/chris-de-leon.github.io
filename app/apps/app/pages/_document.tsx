@@ -12,26 +12,32 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
             rel="stylesheet"
           />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
           {process.env['NODE_ENV'] === 'production' && (
             <>
               <Script
                 src={`https://www.googletagmanager.com/gtag/js?id=${gtag}`}
                 strategy="afterInteractive"
               />
-              <Script id="google-analytics" strategy="afterInteractive">
-                {`
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){window.dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${gtag}');
-                `}
-              </Script>
+              <Script
+                id="google-analytics"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){window.dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${gtag}', {
+                      page_path: window.location.pathname,
+                    });
+                  `,
+                }}
+              />
             </>
           )}
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
         </body>
       </Html>
     )
