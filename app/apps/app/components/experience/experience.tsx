@@ -1,10 +1,11 @@
 import { fadeIn } from 'apps/app/utils/variants'
 import { LINKS } from 'apps/app/content'
 import { motion } from 'framer-motion'
+import { JobTitle } from './job-title'
 import { Skill } from './skill'
 import Link from 'next/link'
 
-const skills = [
+const jobTitles = [
   {
     title: 'Software Engineer',
     description:
@@ -47,7 +48,27 @@ const skills = [
     ),
     url: LINKS.GOOGLE.SCHOLAR,
   },
-]
+] as const
+
+const skills = [
+  // Row 1
+  { color: 'blue', skill: 'JS' },
+  { color: 'purple', skill: 'TS' },
+  { color: 'blue', skill: 'HTML' },
+  { color: 'purple', skill: 'CSS' },
+
+  // Row 2
+  { color: 'purple', skill: 'C' },
+  { color: 'blue', skill: 'C++' },
+  { color: 'purple', skill: 'C#' },
+  { color: 'blue', skill: 'Java' },
+
+  // Row 3
+  { color: 'blue', skill: 'Node' },
+  { color: 'purple', skill: 'Py' },
+  { color: 'blue', skill: 'Rust' },
+  { color: 'purple', skill: 'Go' },
+] as const
 
 export function Experience() {
   return (
@@ -59,46 +80,37 @@ export function Experience() {
               variants={fadeIn('right', 0.1)}
               initial="hidden"
               whileInView={'visible'}
-              viewport={{ once: false, amount: 0.7 }}
+              viewport={{ once: false, amount: 0.4 }}
               className="pb-16"
             >
-              <h1 className="pb-5 text-6xl lg:whitespace-nowrap text-secondary">
+              <h1 className="pb-5 text-3xl lg:text-5xl lg:whitespace-nowrap text-grad-solid">
                 My Experience
               </h1>
-              <h3 className="pb-12 text-3xl text-primary">
+              <h3 className="pb-12 text-xl lg:text-2xl text-primary">
                 I specialize in bridging the gap between theory and practice to
                 deliver impactful solutions
               </h3>
               <Link className="rounded-btn-grad" href="#projects">
                 See My Work
               </Link>
+              <div className="mt-10">
+                <div className="grid grid-cols-4 gap-5">
+                  {skills.map((elem, i) => {
+                    return <Skill key={i} {...elem} />
+                  })}
+                </div>
+              </div>
             </motion.div>
-            <motion.img
-              variants={fadeIn('right', 0.2)}
-              initial="hidden"
-              whileInView={'visible'}
-              viewport={{ once: false, amount: 0.7 }}
-              loading="lazy"
-              src="./skills.png"
-              alt="skills"
-            />
           </div>
           <motion.div
             variants={fadeIn('left', 0.1)}
             initial="hidden"
             whileInView={'visible'}
-            viewport={{ once: false, amount: 0.7 }}
+            viewport={{ once: false, amount: 0.4 }}
             className="text-primary"
           >
-            {skills.map((skill, i) => {
-              return (
-                <Skill
-                  key={i}
-                  title={skill.title}
-                  description={skill.description}
-                  url={skill.url}
-                />
-              )
+            {jobTitles.map((elem, i) => {
+              return <JobTitle key={i} {...elem} />
             })}
           </motion.div>
         </div>

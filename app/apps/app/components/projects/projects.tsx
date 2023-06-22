@@ -17,7 +17,9 @@ export function Projects() {
             viewport={{ once: false, amount: 0.7 }}
           >
             <div>
-              <h1 className="pb-5 text-6xl text-secondary">My Work</h1>
+              <h1 className="pb-5 text-3xl lg:text-6xl text-grad-solid">
+                My Work
+              </h1>
               <p className="max-w-3xl mb-10 text-primary">
                 Here, I showcase a collection of impactful and innovative
                 projects that I have developed or contributed to. My work

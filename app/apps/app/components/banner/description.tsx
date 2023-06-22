@@ -8,11 +8,11 @@ interface BannerDescriptionProps {
 export function BannerDescription(props: BannerDescriptionProps) {
   return (
     <motion.p
+      className="max-w-4xl pb-5 text-sm break-words "
       variants={fadeIn('up', props.animationDelay)}
       initial="hidden"
       whileInView={'visible'}
       viewport={{ once: false, amount: 0.7 }}
-      className="max-w-md pb-5 break-words text-md"
     >
       Developer by day, code wizard by night, caffeine-fueled problem solver
       24/7. I thrive on transforming ideas into digital realities. When I&apos;m
