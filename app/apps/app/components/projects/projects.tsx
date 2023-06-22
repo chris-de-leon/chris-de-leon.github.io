@@ -18,7 +18,7 @@ export function Projects() {
           >
             <div>
               <h1 className="pb-5 text-2xl lg:text-6xl text-grad-solid">
-                My Work
+                Projects
               </h1>
               <p className="max-w-3xl mb-10 text-primary">
                 Here, I showcase a collection of impactful and innovative

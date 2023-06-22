@@ -23,7 +23,7 @@ export function NavBar() {
           />
           <NavBarBookmark
             sectionId="#projects"
-            sectionName="Work"
+            sectionName="Projects"
             icon={<FaCode />}
           />
           <NavBarBookmark
