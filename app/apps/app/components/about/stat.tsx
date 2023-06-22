@@ -14,8 +14,8 @@ interface AboutContentProps {
 
 export function AboutStat(props: AboutContentProps) {
   return (
-    <div className="pb-5 pr-10">
-      <div className="text-3xl font-bold text-grad">
+    <div>
+      <div className="text-lg font-bold lg:text-2xl text-grad-solid">
         {props.prefix}
         {props.inView ? <CountUp {...props.counter} /> : null}
         {props.suffix}

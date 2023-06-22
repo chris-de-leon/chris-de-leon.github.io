@@ -75,8 +75,10 @@ export function Contact() {
             viewport={{ once: false, amount: 0.7 }}
           >
             <div className="flex-1">
-              <h4 className="text-3xl text-secondary">Get in touch</h4>
-              <h1 className="max-w-sm text-6xl text-primary">
+              <h4 className="text-md lg:text-3xl text-grad-solid">
+                Get in touch
+              </h4>
+              <h1 className="max-w-md text-lg lg:text-4xl text-primary">
                 Let&apos;s build something together
               </h1>
             </div>
@@ -90,7 +92,7 @@ export function Contact() {
             onSubmit={handleSubmit}
           >
             <input
-              className="w-full py-3 transition-all bg-transparent border-b outline-none text-primary placeholder:text-primary focus:border-secondary"
+              className="w-full py-3 text-sm transition-all bg-transparent border-b outline-none text-primary placeholder:text-primary focus:border-secondary"
               placeholder="What's your name?"
               type="text"
               minLength={1}
@@ -99,7 +101,7 @@ export function Contact() {
               onChange={(e) => setForm({ name: e.currentTarget.value })}
             />
             <input
-              className="w-full py-3 transition-all bg-transparent border-b outline-none text-primary placeholder:text-primary focus:border-secondary"
+              className="w-full py-3 text-sm transition-all bg-transparent border-b outline-none text-primary placeholder:text-primary focus:border-secondary"
               placeholder="What's your email?"
               minLength={1}
               required
@@ -107,7 +109,7 @@ export function Contact() {
               onChange={(e) => setForm({ email: e.currentTarget.value })}
             />
             <textarea
-              className="w-full py-3 mb-12 transition-all bg-transparent border-b outline-none resize-none text-primary placeholder:text-primary focus:border-secondary"
+              className="w-full py-3 mb-12 text-sm transition-all bg-transparent border-b outline-none resize-none text-primary placeholder:text-primary focus:border-secondary"
               placeholder="How can I be of service?"
               minLength={1}
               required

@@ -16,10 +16,10 @@ export function BannerContact(props: BannerContactProps) {
       className="flex pb-5 gap-x-6"
     >
       <Link className="rounded-btn-grad" href={'#contact'}>
-        Contact Me
+        Contact
       </Link>
       <Link className="pt-2 pb-2 text-grad" href="./resume.pdf" target="_blank">
-        View Résumé
+        Résumé
       </Link>
     </motion.div>
   )

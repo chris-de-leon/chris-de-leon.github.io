@@ -16,7 +16,7 @@ export function NavBarBookmark(props: PropsWithChildren<NavBarBookmarkProps>) {
   useEffect(() => {
     if (router.asPath === `/${props.sectionId}`) {
       setHighlight(
-        'rounded-full bg-gradient-to-r from-accent-4 via-accent-5 to-accent-6 text-white'
+        'rounded-full bg-gradient-to-r from-accent-4 to-accent-2 text-white'
       )
     } else {
       setHighlight('')
@@ -29,7 +29,7 @@ export function NavBarBookmark(props: PropsWithChildren<NavBarBookmarkProps>) {
       href={props.sectionId}
     >
       {/* https://github.com/tailwindlabs/tailwindcss/discussions/2361#discussion-18622 */}
-      <div className="absolute inset-0 flex items-center justify-center w-full h-full transition-all duration-300 ease-linear rounded-full opacity-0 hover:text-white bg-gradient-to-r from-accent-4 via-accent-5 to-accent-6 hover:opacity-100">
+      <div className="absolute inset-0 flex items-center justify-center w-full h-full transition-all duration-300 ease-linear rounded-full opacity-0 hover:text-white bg-gradient-to-r from-accent-4 to-accent-2 hover:opacity-100">
         <span className="absolute text-white rounded-full bottom-12 min-w-max">
           {props.sectionName}
         </span>

@@ -21,7 +21,7 @@ export function Project(props: ProjectProps) {
           alt={props.alt}
         />
         <div className="absolute z-50 transition-all duration-500 -bottom-full left-12 group-hover:bottom-14">
-          <span className="text-grad">{props.category}</span>
+          <span className="text-grad-solid">{props.category}</span>
         </div>
         <div className="absolute z-50 transition-all duration-700 -bottom-full left-12 group-hover:bottom-4">
           <span className="text-3xl text-primary"> {props.title}</span>

@@ -13,7 +13,7 @@ export function BannerSubtitle(props: BannerSubtitleProps) {
       initial="hidden"
       whileInView={'visible'}
       viewport={{ once: false, amount: 0.7 }}
-      className="pb-5 text-xl"
+      className="pb-5 text-xs lg:text-xl"
     >
       <span>I am a </span>
       <TypeAnimation
@@ -30,7 +30,7 @@ export function BannerSubtitle(props: BannerSubtitleProps) {
           2000,
         ]}
         speed={50}
-        className="font-bold text-secondary"
+        className="font-bold text-grad-solid"
         wrapper="span"
         repeat={Infinity}
       />

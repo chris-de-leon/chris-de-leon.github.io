@@ -10,11 +10,7 @@ export function NavBar() {
     <nav className="fixed z-50 w-full bottom-2 lg:bottom-8">
       <div className="container mx-auto">
         <div className="flex flex-row items-center justify-around w-full rounded-full bg-black/20 h-[50px] max-w-[460px] backdrop-blur-2xl mx-auto text-2xl">
-          <NavBarBookmark
-            sectionId="#banner"
-            sectionName="Home"
-            icon={<BiHome />}
-          />
+          <NavBarBookmark sectionId="" sectionName="Home" icon={<BiHome />} />
           <NavBarBookmark
             sectionId="#about"
             sectionName="About"

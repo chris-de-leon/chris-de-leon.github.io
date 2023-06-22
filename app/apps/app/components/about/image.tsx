@@ -8,7 +8,7 @@ interface AboutImageProps {
 export function AboutImage(props: AboutImageProps) {
   return (
     <motion.img
-      variants={fadeIn('right', props.animationDelay)}
+      variants={fadeIn('left', props.animationDelay)}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.7 }}

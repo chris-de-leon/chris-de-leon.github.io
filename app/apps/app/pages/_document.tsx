@@ -9,7 +9,7 @@ class MyDocument extends Document {
         <Head>
           <link href="https://fonts.googleapis.com" rel="preconnect" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
             rel="stylesheet"
           />
           {process.env['NODE_ENV'] === 'production' && (

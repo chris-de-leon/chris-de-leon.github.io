@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { FaGithub, FaLinkedin, FaCode } from 'react-icons/fa'
 import { fadeIn } from '../../utils/variants'
 import { LINKS } from 'apps/app/content'
@@ -19,16 +20,28 @@ export function BannerSocials(props: BannerSocialsProps) {
       className="flex flex-row gap-x-6 max-w-max"
     >
       <Link href={LINKS.LINKEDIN.HOME} target="_blank">
-        <FaLinkedin />
+        <div className="flex items-center justify-center text-black">
+          <img src="blue.png" alt="blue" width={35} />
+          <FaLinkedin className="absolute" />
+        </div>
       </Link>
       <Link href={LINKS.GITHUB.HOME} target="_blank">
-        <FaGithub />
+        <div className="flex items-center justify-center text-black">
+          <img src="purple.png" alt="purple" width={35} />
+          <FaGithub className="absolute" />
+        </div>
       </Link>
       <Link href={LINKS.FIVERR} target="_blank">
-        <FaCode />
+        <div className="flex items-center justify-center text-black">
+          <img src="blue.png" alt="blue" width={35} />
+          <FaCode className="absolute" />
+        </div>
       </Link>
       <Link href={LINKS.GOOGLE.EMAIL} target="_blank">
-        <GrMail />
+        <div className="flex items-center justify-center text-black">
+          <img src="purple.png" alt="purple" width={35} />
+          <GrMail className="absolute" />
+        </div>
       </Link>
     </motion.div>
   )
