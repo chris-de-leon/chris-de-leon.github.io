@@ -21,25 +21,25 @@ export function BannerSocials(props: BannerSocialsProps) {
     >
       <Link href={LINKS.LINKEDIN.HOME} target="_blank">
         <div className="flex items-center justify-center text-black">
-          <img src="blue.png" alt="blue" width={35} />
+          <img src="blue.png" alt="blue" width={35} loading="lazy" />
           <FaLinkedin className="absolute" />
         </div>
       </Link>
       <Link href={LINKS.GITHUB.HOME} target="_blank">
         <div className="flex items-center justify-center text-black">
-          <img src="purple.png" alt="purple" width={35} />
+          <img src="purple.png" alt="purple" width={35} loading="lazy" />
           <FaGithub className="absolute" />
         </div>
       </Link>
       <Link href={LINKS.FIVERR} target="_blank">
         <div className="flex items-center justify-center text-black">
-          <img src="blue.png" alt="blue" width={35} />
+          <img src="blue.png" alt="blue" width={35} loading="lazy" />
           <FaCode className="absolute" />
         </div>
       </Link>
       <Link href={LINKS.GOOGLE.EMAIL} target="_blank">
         <div className="flex items-center justify-center text-black">
-          <img src="purple.png" alt="purple" width={35} />
+          <img src="purple.png" alt="purple" width={35} loading="lazy" />
           <GrMail className="absolute" />
         </div>
       </Link>
