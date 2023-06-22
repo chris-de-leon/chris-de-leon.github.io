@@ -83,7 +83,7 @@ export function Experience() {
               viewport={{ once: false, amount: 0.4 }}
               className="pb-16"
             >
-              <h1 className="pb-5 text-2xl lg:text-5xl lg:whitespace-nowrap text-grad-solid">
+              <h1 className="pb-5 text-2xl break-words lg:text-5xl lg:whitespace-nowrap text-grad-solid">
                 Experience
               </h1>
               <h3 className="pb-12 text-xl lg:text-2xl text-primary">
@@ -91,7 +91,7 @@ export function Experience() {
                 deliver impactful solutions
               </h3>
               <Link className="rounded-btn-grad" href="#projects">
-                See My Work
+                See Work
               </Link>
               <div className="mt-10">
                 <div className="grid grid-cols-4 gap-5">

@@ -31,7 +31,7 @@ export function Projects() {
                 href={LINKS.LINKEDIN.PROJECTS}
                 target="_blank"
               >
-                View All Projects
+                View All
               </Link>
             </div>
             <Project
