@@ -83,8 +83,8 @@ export function Experience() {
               viewport={{ once: false, amount: 0.4 }}
               className="pb-16"
             >
-              <h1 className="pb-5 text-3xl lg:text-5xl lg:whitespace-nowrap text-grad-solid">
-                My Experience
+              <h1 className="pb-5 text-2xl lg:text-5xl lg:whitespace-nowrap text-grad-solid">
+                Experience
               </h1>
               <h3 className="pb-12 text-xl lg:text-2xl text-primary">
                 I specialize in bridging the gap between theory and practice to

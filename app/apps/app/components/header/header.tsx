@@ -16,7 +16,7 @@ export function Header() {
               height={40}
             />
           </Link>
-          <Link className="rounded-btn-grad" href="#contact">
+          <Link className="text-center rounded-btn-grad" href="#contact">
             Let&apos;s Chat
           </Link>
         </div>

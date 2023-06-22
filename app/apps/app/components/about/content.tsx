@@ -8,7 +8,7 @@ interface AboutContentProps {
 export function AboutContent(props: AboutContentProps) {
   return (
     <div>
-      <h1 className="pb-5 text-3xl lg:text-5xl text-grad-solid">About Me</h1>
+      <h1 className="pb-5 text-2xl lg:text-5xl text-grad-solid">About Me</h1>
       <h3 className="pb-5 text-xl lg:max-w-xl lg:text-2xl text-primary">
         I&apos;m a results-driven software engineer and dedicated researcher
       </h3>

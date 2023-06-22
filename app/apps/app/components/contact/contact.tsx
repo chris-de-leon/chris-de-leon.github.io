@@ -92,7 +92,7 @@ export function Contact() {
             onSubmit={handleSubmit}
           >
             <input
-              className="w-full py-3 text-sm transition-all bg-transparent border-b outline-none text-primary placeholder:text-primary focus:border-secondary"
+              className="w-full py-3 text-xs transition-all bg-transparent border-b outline-none lg:text-sm text-primary placeholder:text-primary focus:border-secondary"
               placeholder="What's your name?"
               type="text"
               minLength={1}
@@ -101,7 +101,7 @@ export function Contact() {
               onChange={(e) => setForm({ name: e.currentTarget.value })}
             />
             <input
-              className="w-full py-3 text-sm transition-all bg-transparent border-b outline-none text-primary placeholder:text-primary focus:border-secondary"
+              className="w-full py-3 text-xs transition-all bg-transparent border-b outline-none lg:text-sm text-primary placeholder:text-primary focus:border-secondary"
               placeholder="What's your email?"
               minLength={1}
               required
@@ -109,7 +109,7 @@ export function Contact() {
               onChange={(e) => setForm({ email: e.currentTarget.value })}
             />
             <textarea
-              className="w-full py-3 mb-12 text-sm transition-all bg-transparent border-b outline-none resize-none text-primary placeholder:text-primary focus:border-secondary"
+              className="w-full py-3 mb-12 text-xs transition-all bg-transparent border-b outline-none resize-none lg:text-sm text-primary placeholder:text-primary focus:border-secondary"
               placeholder="How can I be of service?"
               minLength={1}
               required

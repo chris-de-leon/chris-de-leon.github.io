@@ -17,7 +17,7 @@ export function Projects() {
             viewport={{ once: false, amount: 0.7 }}
           >
             <div>
-              <h1 className="pb-5 text-3xl lg:text-6xl text-grad-solid">
+              <h1 className="pb-5 text-2xl lg:text-6xl text-grad-solid">
                 My Work
               </h1>
               <p className="max-w-3xl mb-10 text-primary">
