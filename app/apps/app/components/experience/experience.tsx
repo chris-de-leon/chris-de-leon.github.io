@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const jobTitles = [
   {
-    title: 'Software Engineer',
+    title: 'Full Stack Software Engineer',
     description:
       'During my software engineering journey, I have amassed valuable experience working on diverse projects that encompassed full-stack development, system architecture design, and database optimization. With a strong proficiency in various programming languages and frameworks, I have successfully developed scalable and robust software solutions.',
     url: LINKS.LINKEDIN.EXPERIENCE,
@@ -19,10 +19,10 @@ const jobTitles = [
     url: LINKS.LINKEDIN.EXPERIENCE,
   },
   {
-    title: 'HCI Researcher',
+    title: 'HCI and RDBMS Researcher',
     description: (
       <>
-        I served as an academic researcher for 4 years during my undergrad and
+        I served as an academic researcher for 2 years during my undergrad and
         graduate careers at{' '}
         <Link href="https://www.berkeley.edu/" target="_blank">
           <b>UC Berkeley</b>
@@ -35,15 +35,15 @@ const jobTitles = [
         <Link href="https://chipdelmal.github.io/MoNeT/SSBSTP" target="_blank">
           <b>pathogen networks</b>
         </Link>{' '}
-        for two years. Afterwards, I transitioned to UC Berkeley&apos;s{' '}
+        and later transitioned to UC Berkeley&apos;s{' '}
         <Link href="https://rise.cs.berkeley.edu/" target="_blank">
           <b>RISE Lab</b>
         </Link>{' '}
         where I worked on the{' '}
         <Link href="https://dataspread.github.io/" target="_blank">
           <b>Dataspread project</b>
-        </Link>{' '}
-        for another 2 years.
+        </Link>
+        .
       </>
     ),
     url: LINKS.GOOGLE.SCHOLAR,

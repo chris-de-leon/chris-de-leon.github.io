@@ -13,14 +13,13 @@ export function AboutContent(props: AboutContentProps) {
         I&apos;m a results-driven software engineer and dedicated researcher
       </h3>
       <p className="pb-5 text-sm lg:max-w-xl text-primary">
-        I graduated from UC Berkeley with a B.A. in computer science in 2021 and
-        M.S. in Human-Computer Interaction (HCI) in 2022. While at Berkeley, I
-        spent 4 years as an academic researcher. After graduating, I&apos;ve had
-        the opportunity to apply my knowledge of computer science and HCI to
-        design seamless user experiences for emerging blockchain technologies in
-        industry. I&apos;m passionate about writing clean, efficient code and
-        love staying up-to-date with the latest industry trends and best
-        practices.
+        I graduated from UC Berkeley with a B.A. in computer science in 2020 and
+        M.S. in Human-Computer Interaction (HCI) and Relational Database
+        Management Systems (RDBMS) in 2022. After graduating, I&apos;ve had the
+        opportunity to apply my knowledge of computer science to design seamless
+        user experiences for emerging blockchain technologies in industry.
+        I&apos;m passionate about writing clean, efficient code and love staying
+        up-to-date with the latest industry trends and best practices.
       </p>
       <div className="flex flex-col pb-10 lg:flex-row lg:gap-x-10 gap-y-5">
         <AboutStat
