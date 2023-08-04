@@ -7,7 +7,7 @@ export const LINKS = {
   },
   GOOGLE: {
     SCHOLAR: 'https://scholar.google.com/citations?view_op=list_works&hl=en&user=VeFJ8_gAAAAJ',
-    EMAIL: 'mailto:chrisdeleon333@gmail.com'
+    EMAIL: 'mailto:jobseek.chris.deleon@gmail.com'
   },
   GITHUB: {
     REPOS: 'https://github.com/chris-de-leon?tab=repositories',

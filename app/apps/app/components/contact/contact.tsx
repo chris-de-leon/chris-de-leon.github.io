@@ -37,7 +37,7 @@ export function Contact() {
     try {
       // https://www.staticforms.xyz/
       const url = new URL('https://api.staticforms.xyz/submit')
-      const key = '69b5dff6-b0e9-41da-8d63-adb9881db046'
+      const key = '5a85889b-a82d-4adb-8330-79ce92acade1'
       const res = await fetch(url.href, {
         method: 'POST',
         headers: {
