@@ -3,7 +3,7 @@ import Script from 'next/script'
 
 class MyDocument extends Document {
   render() {
-    const gtag = 'G-BB0Z8BSLC8'
+    const gtag = 'G-NYZBRVW35H'
     return (
       <Html>
         <Head>
