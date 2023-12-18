@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx serve app",
     "format": "nx format",
+    "clean": "rm -rf ./.nx ./.next ./dist ./apps/app/.next",
     "build": "nx run app:build:production"
   },
   "private": true,
