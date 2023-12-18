@@ -61,8 +61,6 @@ jobs:
 
       - name: Install dependencies
         run: cd app && npm ci --verbose
-        env:
-          NODE_ENV: production
 
       - name: Static HTML export with Next.js
         run: cd app && npm run build
