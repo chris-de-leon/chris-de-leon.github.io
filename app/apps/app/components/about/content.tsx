@@ -28,12 +28,12 @@ export function AboutContent(props: AboutContentProps) {
           suffix="+"
           counter={{
             start: 0,
-            end: 2,
+            end: 7,
             duration: 3,
           }}
           label={
             <>
-              Years of <br /> Industry <br /> Experience
+              Years of <br /> Coding <br /> Experience
             </>
           }
         />
@@ -43,12 +43,12 @@ export function AboutContent(props: AboutContentProps) {
           suffix="+"
           counter={{
             start: 0,
-            end: 1000,
-            duration: 2,
+            end: 10,
+            duration: 3,
           }}
           label={
             <>
-              Code <br /> Reviews <br /> Conducted
+              Apps <br /> Deployed to <br /> Production
             </>
           }
         />
@@ -59,7 +59,7 @@ export function AboutContent(props: AboutContentProps) {
           counter={{
             start: 0,
             end: 1000000,
-            duration: 1.5,
+            duration: 2,
           }}
           label={
             <>
