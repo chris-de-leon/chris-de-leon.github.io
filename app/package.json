@@ -5,8 +5,7 @@
   "scripts": {
     "start": "nx serve app",
     "format": "nx format",
-    "build": "nx run app:build:production",
-    "export": "nx run app:export:production"
+    "build": "nx run app:build:production"
   },
   "private": true,
   "dependencies": {
