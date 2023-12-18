@@ -58,7 +58,7 @@ jobs:
       - name: Install dependencies
         run: cd app && npm ci --verbose
       - name: Static HTML export with Next.js
-        run: cd app && npm run export
+        run: cd app && npm run build
         env:
           NODE_ENV: production
       - name: Upload artifact
