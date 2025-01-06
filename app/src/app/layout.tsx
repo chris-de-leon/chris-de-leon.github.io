@@ -1,8 +1,10 @@
+import "../styles/globals.css"
+
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { Header } from "@app/components/layouts/header"
 import { Geist, Geist_Mono } from "next/font/google"
 import type { Metadata } from "next"
-
-import "../styles/globals.css"
+import { env } from "@app/lib/env"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +25,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const gtag = env.NEXT_PUBLIC_GTAG
   return (
     <html lang="en">
       <body
@@ -33,6 +36,7 @@ export default function RootLayout({
           {children}
         </div>
       </body>
+      {gtag != null && <GoogleAnalytics gaId={gtag} />}
     </html>
   )
 }

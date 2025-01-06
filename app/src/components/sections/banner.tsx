@@ -47,7 +47,7 @@ export function Banner() {
               <div className="flex flex-row items-center justify-around md:w-1/4 md:gap-x-5">
                 <Link href="https://github.com/chris-de-leon" target="_blank">
                   <div className="relative h-[25px] w-[25px] rounded-full bg-secondary object-cover md:h-[40px] md:w-[40px]">
-                    <Image src={Github} alt="github" layout="fill" />
+                    <Image src={Github} alt="github" />
                   </div>
                 </Link>
                 <Link
@@ -55,7 +55,7 @@ export function Banner() {
                   target="_blank"
                 >
                   <div className="relative h-[25px] w-[25px] rounded-full bg-secondary object-cover md:h-[40px] md:w-[40px]">
-                    <Image src={Linkedin} alt="linkedin" layout="fill" />
+                    <Image src={Linkedin} alt="linkedin" />
                   </div>
                 </Link>
                 <Link
@@ -63,7 +63,7 @@ export function Banner() {
                   target="_blank"
                 >
                   <div className="relative h-[25px] w-[25px] rounded-full bg-secondary object-cover md:h-[40px] md:w-[40px]">
-                    <Image src={Fiverr} alt="fiverr" layout="fill" />
+                    <Image src={Fiverr} alt="fiverr" />
                   </div>
                 </Link>
                 <Link
@@ -71,7 +71,7 @@ export function Banner() {
                   target="_blank"
                 >
                   <div className="relative h-[25px] w-[25px] rounded-full bg-secondary object-cover md:h-[40px] md:w-[40px]">
-                    <Image src={Email} alt="email" layout="fill" />
+                    <Image src={Email} alt="email" />
                   </div>
                 </Link>
               </div>
