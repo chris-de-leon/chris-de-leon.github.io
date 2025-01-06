@@ -40,21 +40,23 @@ export function Work() {
             </p>
           </div>
           <Carousel className="w-3/4 md:w-1/2">
-            <CarouselContent>
+            <CarouselContent className="flex items-center">
               {works.map((w, i) => (
                 <CarouselItem key={i}>
                   <Drawer>
                     <DrawerTrigger asChild>
                       <Button
-                        className="flex h-full w-full items-center justify-center"
+                        className="h-full w-full border border-secondary"
                         variant="link"
                       >
-                        <Image
-                          src={w.img.src}
-                          alt={w.img.alt}
-                          width={750}
-                          height={750}
-                        />
+                        <div className="relative flex aspect-video w-full items-center justify-center overflow-clip">
+                          <Image
+                            className="left-0 top-0 h-full w-full object-cover"
+                            src={w.img.src}
+                            alt={w.img.alt}
+                            fill
+                          />
+                        </div>
                       </Button>
                     </DrawerTrigger>
                     <DrawerContent className="border-secondary">

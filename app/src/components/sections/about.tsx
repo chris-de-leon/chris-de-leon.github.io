@@ -6,8 +6,13 @@ export function About() {
     <div id="about" className="section bg-muted">
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-center text-primary-foreground md:flex-row md:gap-x-10">
-          <div className="hidden w-1/2 justify-center md:flex">
-            <Image src="/coding.jpg" alt="coding" width={1000} height={1000} />
+          <div className="relative hidden aspect-video w-1/2 justify-center overflow-clip md:flex">
+            <Image
+              className="left-0 top-0 h-full w-full object-cover"
+              src="/coding.jpg"
+              alt="coding"
+              fill
+            />
           </div>
           <div className="flex flex-col justify-evenly gap-y-5 md:w-1/2">
             <div className="flex flex-col gap-y-5">
@@ -17,12 +22,12 @@ export function About() {
               <span className="text-center text-2xl md:text-left md:text-4xl">
                 I am a Full Stack Blockchain Engineer based in Los Angeles
               </span>
-              <div className="flex justify-center md:hidden">
+              <div className="relative flex aspect-video w-full justify-center overflow-clip md:hidden">
                 <Image
+                  className="left-0 top-0 h-full w-full object-cover"
                   src="/coding.jpg"
                   alt="coding"
-                  width={400}
-                  height={400}
+                  fill
                 />
               </div>
               <p className="text-center md:text-left">

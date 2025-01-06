@@ -10,7 +10,7 @@ import Link from "next/link"
 
 export function Banner() {
   return (
-    <div id="home" className="section h-screen text-primary-foreground">
+    <div id="home" className="section min-h-screen text-primary-foreground">
       <div className="container mx-auto">
         <div className="flex flex-col justify-between gap-y-8 md:gap-y-32">
           <div className="flex flex-col items-center md:flex-row">
@@ -29,10 +29,13 @@ export function Banner() {
                   typingPauseMs={2000}
                 />
               </div>
-              <div className="flex justify-center md:hidden">
-                <div className="w-1/2 overflow-clip rounded-full bg-secondary">
-                  <Image src={"/me.png"} alt="me" width={125} height={125} />
-                </div>
+              <div className="relative flex aspect-square overflow-clip rounded-full bg-gradient-to-l from-secondary md:hidden">
+                <Image
+                  className="left-0 top-0 h-full w-full object-cover"
+                  src={"/me.png"}
+                  alt="me"
+                  fill
+                />
               </div>
               <p className="text-center text-sm md:w-3/4 md:text-left md:text-lg">
                 Software engineer based in L.A. with 10+ years of coding
@@ -43,32 +46,52 @@ export function Banner() {
               </p>
               <div className="flex flex-row items-center justify-around md:w-1/4 md:gap-x-5">
                 <Link href="https://github.com/chris-de-leon" target="_blank">
-                  <div className="relative h-[25px] w-[25px] rounded-full bg-secondary object-cover md:h-[40px] md:w-[40px]">
-                    <Image src={Github} alt="github" />
+                  <div className="relative aspect-square w-[25px] rounded-full bg-secondary md:w-[40px]">
+                    <Image
+                      className="left-0 top-0 h-full w-full object-cover"
+                      src={Github}
+                      alt="github"
+                      fill
+                    />
                   </div>
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/chris-de-leon-96bb361b5/"
                   target="_blank"
                 >
-                  <div className="relative h-[25px] w-[25px] rounded-full bg-secondary object-cover md:h-[40px] md:w-[40px]">
-                    <Image src={Linkedin} alt="linkedin" />
+                  <div className="relative aspect-square w-[25px] rounded-full bg-secondary md:w-[40px]">
+                    <Image
+                      className="left-0 top-0 h-full w-full object-cover"
+                      src={Linkedin}
+                      alt="linkedin"
+                      fill
+                    />
                   </div>
                 </Link>
                 <Link
                   href="https://www.fiverr.com/chris_de_leon?public_mode=true"
                   target="_blank"
                 >
-                  <div className="relative h-[25px] w-[25px] rounded-full bg-secondary object-cover md:h-[40px] md:w-[40px]">
-                    <Image src={Fiverr} alt="fiverr" />
+                  <div className="relative aspect-square w-[25px] rounded-full bg-secondary md:w-[40px]">
+                    <Image
+                      className="left-0 top-0 h-full w-full object-cover"
+                      src={Fiverr}
+                      alt="fiverr"
+                      fill
+                    />
                   </div>
                 </Link>
                 <Link
                   href="mailto:chrisdeleon333+jobseek@gmail.com"
                   target="_blank"
                 >
-                  <div className="relative h-[25px] w-[25px] rounded-full bg-secondary object-cover md:h-[40px] md:w-[40px]">
-                    <Image src={Email} alt="email" />
+                  <div className="relative aspect-square w-[25px] rounded-full bg-secondary md:w-[40px]">
+                    <Image
+                      className="left-0 top-0 h-full w-full object-cover"
+                      src={Email}
+                      alt="email"
+                      fill
+                    />
                   </div>
                 </Link>
               </div>
@@ -83,8 +106,13 @@ export function Banner() {
                 </Button>
               </div>
             </div>
-            <div className="hidden w-2/5 overflow-clip rounded-full bg-secondary md:flex">
-              <Image src={"/me.png"} alt="me" width={430} height={430} />
+            <div className="relative hidden aspect-square w-1/2 overflow-clip rounded-full bg-gradient-to-l from-secondary md:flex">
+              <Image
+                className="left-0 top-0 h-full w-full object-cover"
+                src={"/me.png"}
+                alt="me"
+                fill
+              />
             </div>
           </div>
           <InfiniteCarousel items={tools} />
@@ -95,10 +123,10 @@ export function Banner() {
 }
 
 const words = [
-  "I like coding stuff 💻 ",
+  "I like to code 💻 ",
   "I use Neovim btw 😎 ",
   "I love coffee ☕ ",
-  "I play guitar sometimes 🎸",
+  "I play some guitar 🎸",
 ]
 
 const tools = [

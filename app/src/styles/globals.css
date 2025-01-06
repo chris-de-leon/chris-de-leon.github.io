@@ -62,6 +62,11 @@
     @apply flex items-center justify-center py-24;
   }
 
+  /* https://cruip.com/create-an-infinite-horizontal-scroll-animation-with-tailwind-css/#creating-a-gradient-mask */
+  .gradient-mask {
+    @apply [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)];
+  }
+
   /* https://www.hyperui.dev/blog/text-shadow-with-tailwindcss */
   /* https://stackoverflow.com/a/7061505 */
   .text-orange-glow {

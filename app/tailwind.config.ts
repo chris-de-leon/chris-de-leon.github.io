@@ -10,8 +10,8 @@ export default {
   theme: {
     container: {
       padding: {
-        DEFAULT: "20px",
-        lg: "20px",
+        DEFAULT: "50px",
+        lg: "100px",
       },
     },
     extend: {

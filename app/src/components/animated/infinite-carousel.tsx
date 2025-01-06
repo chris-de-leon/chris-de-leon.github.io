@@ -17,12 +17,12 @@ export function InfiniteCarousel(props: InfiniteCarouselProps) {
         {props.items.map((item, i) => {
           return (
             <div className="flex flex-col items-center justify-center" key={i}>
-              <div className="w-12 overflow-clip rounded-full">
+              <div className="relative aspect-square w-12 overflow-clip rounded-full">
                 <Image
+                  className="left-0 top-0 h-full w-full object-cover"
                   src={item.img.src}
                   alt={item.img.alt}
-                  width={100}
-                  height={100}
+                  fill
                 />
               </div>
               <p className="mt-1">{item.name}</p>
