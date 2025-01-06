@@ -52,7 +52,7 @@ jobs:
           static_site_generator: next
 
       - name: Install dependencies
-        run: cd app && pnpm ci --verbose
+        run: cd app && pnpm i --frozen-lockfile --verbose
 
       - name: Static HTML export with Next.js
         run: cd app && pnpm run build
