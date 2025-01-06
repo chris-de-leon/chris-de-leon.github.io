@@ -36,7 +36,7 @@ export function Work() {
             <p className="text-center md:text-left">
               I take pride in creating high-quality, impactful projects that
               solve real problems and leave a lasting impression. Here is a
-              selection of my latest work showcasing my skills and creativity:
+              selection of my latest work showcasing my skills and creativity.
             </p>
           </div>
           <Carousel className="w-3/4 md:w-1/2">

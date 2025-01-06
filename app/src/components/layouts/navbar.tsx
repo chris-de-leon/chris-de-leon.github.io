@@ -1,4 +1,8 @@
+"use client"
+
 import { Button } from "../ui/button"
+import { Menu } from "lucide-react"
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -15,10 +19,12 @@ import {
 } from "@app/components/ui/dropdown-menu"
 
 export function Navbar() {
+  const [open, setOpen] = useState(false)
+
   return (
     <div className="container mx-auto">
       {/* Mobile */}
-      <div className="flex w-full flex-row justify-between text-primary-foreground md:hidden">
+      <div className="flex w-full flex-row items-center justify-between text-primary-foreground md:hidden">
         <Image
           className="rounded-full"
           src="/logo.webp"
@@ -26,41 +32,43 @@ export function Navbar() {
           width={50}
           height={50}
         />
-        <DropdownMenu>
-          <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
+        <DropdownMenu open={open} onOpenChange={setOpen}>
+          <DropdownMenuTrigger asChild>
+            <Menu onClick={() => setOpen(true)} />
+          </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-primary text-primary-foreground">
             <DropdownMenuItem>
-              <Link href={"/#banner"} legacyBehavior passHref>
+              <Link href={"/#banner"} onClick={() => setOpen(false)}>
                 Home
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link href={"/#about"} legacyBehavior passHref>
+              <Link href={"/#about"} onClick={() => setOpen(false)}>
                 About Me
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link href={"/#experience"} legacyBehavior passHref>
+              <Link href={"/#experience"} onClick={() => setOpen(false)}>
                 Experience
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link href={"/#work"} legacyBehavior passHref>
+              <Link href={"/#work"} onClick={() => setOpen(false)}>
                 Work
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link href={"/#testimonials"} legacyBehavior passHref>
+              <Link href={"/#testimonials"} onClick={() => setOpen(false)}>
                 Testimonials
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link href={"/#contact"} legacyBehavior passHref>
+              <Link href={"/#contact"} onClick={() => setOpen(false)}>
                 Get In Touch
               </Link>
             </DropdownMenuItem>
