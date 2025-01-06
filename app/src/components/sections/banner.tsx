@@ -44,7 +44,7 @@ export function Banner() {
                 secure applications and passionate about leveraging
                 decentralized technologies to create impactful solutions.
               </p>
-              <div className="flex flex-row items-center justify-around md:w-1/4 md:gap-x-5">
+              <div className="flex flex-row items-center justify-start md:w-1/4 md:gap-x-5">
                 <Link href="https://github.com/chris-de-leon" target="_blank">
                   <div className="relative aspect-square w-[25px] rounded-full bg-secondary md:w-[40px]">
                     <Image
