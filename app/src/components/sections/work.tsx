@@ -57,7 +57,7 @@ export function Work() {
                         />
                       </Button>
                     </DrawerTrigger>
-                    <DrawerContent className="border-secondary bg-primary">
+                    <DrawerContent className="border-secondary">
                       <div className="mx-auto w-full max-w-sm">
                         <DrawerHeader className="text-primary-foreground">
                           <DrawerTitle className="text-foreground">

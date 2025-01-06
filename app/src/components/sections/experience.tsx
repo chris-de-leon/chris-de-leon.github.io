@@ -2,7 +2,7 @@ import { ProgressTimeline } from "../ui/timeline"
 
 export function Experience() {
   return (
-    <div id="experience" className="section bg-primary text-primary-foreground">
+    <div id="experience" className="section text-primary-foreground">
       <div className="container mx-auto">
         <div className="flex flex-col justify-around gap-y-10">
           <div className="flex flex-col gap-y-5 md:w-1/2">

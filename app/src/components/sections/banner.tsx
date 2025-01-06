@@ -10,10 +10,7 @@ import Link from "next/link"
 
 export function Banner() {
   return (
-    <div
-      id="home"
-      className="section h-screen bg-primary text-primary-foreground"
-    >
+    <div id="home" className="section h-screen text-primary-foreground">
       <div className="container mx-auto">
         <div className="flex flex-col justify-between gap-y-8 md:gap-y-32">
           <div className="flex flex-col items-center md:flex-row">

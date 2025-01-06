@@ -13,7 +13,7 @@ import {
 
 export function Testimonials() {
   return (
-    <div id="testimonials" className="section bg-primary">
+    <div id="testimonials" className="section">
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-center gap-y-10">
           <div className="flex flex-col items-center gap-y-5 text-primary-foreground">
