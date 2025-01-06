@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 10%; /* Black */
+    --foreground: 35 100% 55%; /* Vibrant Orange */
+    --muted: 0 0% 12%; /* Blackish */
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --border: 35 90% 60%; /* Bold Orange */
+    --input: 35 90% 60%; /* Bold Orange */
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 8%; /* Deep Black */
+    --primary: 0 0% 10%; /* Black */
+    --primary-foreground: 30 20% 95%; /* Pale Off-White */
+    --secondary: 35 100% 55%; /* Vibrant Orange */
+    --secondary-foreground: 0 0% 10%; /* Black */
+    --accent: 35 100% 55%; /* Vibrant Orange */
+    --accent-foreground: 0 0% 10%; /* Black */
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: 215 20.2% 65.1%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: 216 34% 17%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  .section {
+    @apply flex items-center justify-center py-24;
+  }
+
+  /* https://www.hyperui.dev/blog/text-shadow-with-tailwindcss */
+  /* https://stackoverflow.com/a/7061505 */
+  .text-orange-glow {
+    @apply [text-shadow:_0_0_20px_hsl(35_100%_55%_/_100%)];
+  }
+}
