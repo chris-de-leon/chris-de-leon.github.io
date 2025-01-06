@@ -46,10 +46,10 @@ jobs:
           static_site_generator: next
 
       - name: Install dependencies
-        run: cd app && npm ci --verbose
+        run: cd app && pnpm ci --verbose
 
       - name: Static HTML export with Next.js
-        run: cd app && npm run build
+        run: cd app && pnpm run build
         env:
           NODE_ENV: production
 
