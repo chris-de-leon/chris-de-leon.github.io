@@ -52,17 +52,17 @@ jobs:
           static_site_generator: next
 
       - name: Install dependencies
-        run: cd app && pnpm i --frozen-lockfile --verbose
+        run: pnpm i --frozen-lockfile --verbose
 
       - name: Static HTML export with Next.js
-        run: cd app && pnpm run build
+        run: pnpm run build
         env:
           NODE_ENV: production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./app/build
+          path: ./build
 
   deploy:
     needs: build
